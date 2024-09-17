@@ -7,7 +7,7 @@ namespace ProblematicProblem
     public class Program
     {
         
-        
+
         static bool cont = true;
         static List<string> activities = new List<string>() { "Movies", "Paintball", "Bowling", "Lazer Tag", "LAN Party", "Hiking", "Axe Throwing", "Wine Tasting" };
         static void Main(string[] args)
@@ -60,11 +60,13 @@ namespace ProblematicProblem
                     Console.Write("What would you like to add? ");
                     string userAddition = Console.ReadLine();
                     activities.Add(userAddition);
+
                     foreach (string activity in activities)
                     {
-                        Console.Write($"{activity} ");
+                        Console.Write($" {activity} ");
                         Thread.Sleep(250);
                     }
+
                     Console.WriteLine();
                     Console.WriteLine("Would you like to add more? yes/no: ");
                     addToList = (Console.ReadLine().ToLower() == "yes") ? true : false;
@@ -79,6 +81,7 @@ namespace ProblematicProblem
                      Console.Write(". ");
                      Thread.Sleep(500);
                  }
+
                  Console.WriteLine();
                  Console.Write("Choosing your random activity");
 
@@ -106,7 +109,7 @@ namespace ProblematicProblem
 
                     Console.Write($"Ah got it! {userName}, your random activity is: {randomActivity}! Is this ok or do you want to grab another activity? Keep/Redo: ");
                     Console.WriteLine();
-                    cont = (Console.ReadLine().ToLower() == "Redo") ? true : false;
+                    cont = (Console.ReadLine().ToLower() == "redo") ? true : false;
              }
             
         }    
